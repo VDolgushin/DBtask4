@@ -1,16 +1,16 @@
-package org.example.view.tablepanels;
+package client.view.tablepanels;
 
-import org.example.view.MainMenu;
+import client.view.MainMenu;
 
 import javax.swing.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ContractsTablePanel extends TablePanel {
-    public ContractsTablePanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection){
+public class ComplainsTablePanel extends TablePanel {
+    public ComplainsTablePanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection){
         super(mainMenu,oldP, tableName,connection);
-        tableInitSelectQuery = "SELECT Д_ID, Д_ДАТА_ЗАКЛЮЧЕНИЯ, Д_ДАТА_ЗАВЕРШЕНИЯ, Д_СКИДКА, О_НАЗВАНИЕ as О_НАЗВАНИЕ_ОРГАНИЗАЦИИ FROM ДОГОВОРА " +
-                "LEFT JOIN ОРГАНИЗАЦИИ using(О_ID)";
+        tableInitSelectQuery = "SELECT Ж_ID, Ж_ЖАЛОБА, Ж_ДАТА, КЛ_ФИО, Н_НОМЕР_КОМНАТЫ FROM ЖАЛОБЫ LEFT JOIN КЛИЕНТЫ using(КЛ_ID) " +
+                "LEFT JOIN НОМЕРА using(Н_ID)";
         drawTablePanel();
     }
     @Override

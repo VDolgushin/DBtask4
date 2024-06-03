@@ -1,6 +1,6 @@
-package org.example.view.tablepanels;
+package client.view.tablepanels;
 
-import org.example.view.MainMenu;
+import client.view.MainMenu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class RoomsTablePanel extends TablePanel {
-    public RoomsTablePanel(MainMenu mainMenu,JPanel oldP, String tableName, Connection connection){
+    public RoomsTablePanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection){
         super(mainMenu,oldP, tableName,connection);
         tableInitSelectQuery = "SELECT Н_ID, Н_НОМЕР_КОМНАТЫ, Н_ЭТАЖ, Н_СТОИМОСТЬ_НОМЕРА, К_ИМЯ as К_ИМЯ_КОРПУСА  FROM НОМЕРА " +
                 "LEFT JOIN КОРПУСА using(К_ID)";

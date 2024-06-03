@@ -1,16 +1,11 @@
-package org.example.view;
-
-import org.example.view.tablepanels.BuildingsTablePanel;
-import org.example.view.tablepanels.TablePanel;
+package client.view;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.HashMap;
 
 public class MainMenu extends JFrame {
     private final JPanel p;

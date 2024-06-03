@@ -1,8 +1,8 @@
-package org.example.view.tablepanels;
+package client.view.tablepanels;
 
-import org.example.view.MainMenu;
-import org.example.view.utility.TableButtonDelete;
-import org.example.view.utility.TableButtonEdit;
+import client.view.MainMenu;
+import client.view.utility.TableButtonDelete;
+import client.view.utility.TableButtonEdit;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

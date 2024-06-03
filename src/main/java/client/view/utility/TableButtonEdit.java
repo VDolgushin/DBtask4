@@ -1,30 +1,19 @@
-package org.example.view.utility;
+package client.view.utility;
 
 import javax.swing.*;
 import javax.swing.event.CellEditorListener;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
 import java.awt.*;
-import java.net.URL;
 import java.util.EventObject;
 import java.util.Vector;
 
-public class TableButtonDelete extends JButton implements TableCellRenderer, TableCellEditor {
+public class TableButtonEdit extends JButton implements TableCellRenderer, TableCellEditor {
     private int selectedRow;
     private int selectedColumn;
     Vector<TableButtonListener> listener;
-    public TableButtonDelete(String text) {
+    public TableButtonEdit(String text) {
         super(text);
-        setOpaque(true);
-        listener = new Vector<>();
-        addActionListener(e -> {
-            for(TableButtonListener l : listener) {
-                l.tableButtonClicked(selectedRow, selectedColumn);
-            }
-        });
-    }
-    public TableButtonDelete(ImageIcon imageIcon) {
-        super(imageIcon);
         setOpaque(true);
         listener = new Vector<>();
         addActionListener(e -> {

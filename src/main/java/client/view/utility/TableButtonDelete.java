@@ -1,4 +1,4 @@
-package org.example.view.utility;
+package client.view.utility;
 
 import javax.swing.*;
 import javax.swing.event.CellEditorListener;
@@ -8,12 +8,22 @@ import java.awt.*;
 import java.util.EventObject;
 import java.util.Vector;
 
-public class TableButtonEdit extends JButton implements TableCellRenderer, TableCellEditor {
+public class TableButtonDelete extends JButton implements TableCellRenderer, TableCellEditor {
     private int selectedRow;
     private int selectedColumn;
     Vector<TableButtonListener> listener;
-    public TableButtonEdit(String text) {
+    public TableButtonDelete(String text) {
         super(text);
+        setOpaque(true);
+        listener = new Vector<>();
+        addActionListener(e -> {
+            for(TableButtonListener l : listener) {
+                l.tableButtonClicked(selectedRow, selectedColumn);
+            }
+        });
+    }
+    public TableButtonDelete(ImageIcon imageIcon) {
+        super(imageIcon);
         setOpaque(true);
         listener = new Vector<>();
         addActionListener(e -> {

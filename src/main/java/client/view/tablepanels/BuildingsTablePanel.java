@@ -1,6 +1,6 @@
-package org.example.view.tablepanels;
+package client.view.tablepanels;
 
-import org.example.view.MainMenu;
+import client.view.MainMenu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -125,7 +125,7 @@ public class BuildingsTablePanel extends TablePanel {
             throw new RuntimeException(ex);
         }
     }
-    public BuildingsTablePanel(MainMenu mainMenu,JPanel oldP, String tableName, Connection connection){
+    public BuildingsTablePanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection){
         super(mainMenu,oldP, tableName,connection);
         tableInitSelectQuery = "SELECT К_ID, К_ИМЯ, К_КЛАСС, К_КОЛИЧЕСТВО_ЭТАЖЕЙ, К_КОЛИЧЕСТВО_НОМЕРОВ_НА_ЭТАЖЕ FROM КОРПУСА";
         drawTablePanel();

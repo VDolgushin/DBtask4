@@ -1,10 +1,7 @@
-package org.example.view.tablepanels.functables;
+package client.view.tablepanels.functables;
 
-import org.example.view.MainMenu;
-import org.example.view.QueryMenu;
-import org.example.view.tablepanels.TablePanel;
-import org.example.view.utility.TableButtonDelete;
-import org.example.view.utility.TableButtonEdit;
+import client.view.MainMenu;
+import client.view.tablepanels.TablePanel;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -12,7 +9,7 @@ import java.awt.*;
 import java.sql.*;
 
 public class QueryPanel extends TablePanel {
-    public QueryPanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection,String selectQuery){
+    public QueryPanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection, String selectQuery){
         super(mainMenu,oldP, tableName,connection);
         this.tableInitSelectQuery = selectQuery;
         drawTablePanel();

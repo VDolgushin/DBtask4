@@ -1,6 +1,6 @@
-package org.example.view.tablepanels;
+package client.view.tablepanels;
 
-import org.example.view.MainMenu;
+import client.view.MainMenu;
 
 import javax.swing.*;
 import java.sql.Connection;

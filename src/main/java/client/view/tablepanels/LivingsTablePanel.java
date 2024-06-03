@@ -1,6 +1,6 @@
-package org.example.view.tablepanels;
+package client.view.tablepanels;
 
-import org.example.view.MainMenu;
+import client.view.MainMenu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class LivingsTablePanel extends TablePanel {
-    public LivingsTablePanel(MainMenu mainMenu,JPanel oldP, String tableName, Connection connection){
+    public LivingsTablePanel(MainMenu mainMenu, JPanel oldP, String tableName, Connection connection){
         super(mainMenu,oldP, tableName,connection);
         tableInitSelectQuery = "SELECT П_ID, П_ДАТА_ЗАСЕЛЕНИЯ, П_ДАТА_ОСВОБОЖДЕНИЯ, П_СЧЁТ_ЗА_ПРОЖИВАНИЯ, П_СЧЁТ_ЗА_ДОПОЛНИТЕЛЬЫЕ_УСЛУГИ," +
                 " П_ДАТА_ОПЛАТЫ_СЧЁТА, КЛ_ФИО, Н_НОМЕР_КОМНАТЫ, К_ИМЯ, Б_ID as Б_ID_БРОНИ FROM ПРОЖИВАНИЯ " +

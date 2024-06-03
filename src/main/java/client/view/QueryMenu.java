@@ -1,6 +1,6 @@
-package org.example.view;
+package client.view;
 
-import org.example.view.tablepanels.functables.QueryPanel;
+import client.view.tablepanels.functables.QueryPanel;
 
 import javax.swing.*;
 import java.awt.*;

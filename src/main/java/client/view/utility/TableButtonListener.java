@@ -1,4 +1,4 @@
-package org.example.view.utility;
+package client.view.utility;
 
 import java.util.EventListener;
 

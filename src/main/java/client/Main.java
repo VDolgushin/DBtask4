@@ -1,6 +1,6 @@
-package org.example;
+package client;
 
-import org.example.view.MainMenu;
+import client.view.MainMenu;
 
 import javax.swing.*;
 

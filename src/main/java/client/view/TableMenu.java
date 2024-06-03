@@ -1,7 +1,6 @@
-package org.example.view;
+package client.view;
 
-import org.example.Main;
-import org.example.view.tablepanels.TablePanel;
+import client.view.tablepanels.TablePanel;
 
 import javax.swing.*;
 import java.awt.*;
